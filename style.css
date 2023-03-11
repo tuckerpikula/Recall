@@ -178,3 +178,103 @@ nav.secondary-nav ul li a {
     text-decoration: underline;
     font-size: 1.4rem;
 }
+
+/* Media Quries -- Tablet */
+
+@media only screen and (min-width: 700px) {
+    
+    .header-cta {
+        display: inherit;
+        color: white;
+        font-size: 1.6rem;
+        background-color: var(--primary-color);
+        font-weight: bold;
+        padding: .5em .7em;
+        border-radius: .3em;
+    }
+    
+    .hero .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 3em;
+    }
+
+    section.hero {
+        text-align: left
+    }
+
+    h1 {
+        font-size: 5.1rem;
+        line-height: 110%;
+    }
+
+    .hero .right-col {
+        position: relative;
+        width: 500px;
+        height: 600px;
+        /* line 216 removes horizontal scroll bar */
+        overflow: hidden;
+    }
+
+    .phone {
+        position: absolute;
+        left: 0;
+        width: 500px;
+    }
+
+    .cta-btns {
+        justify-content: left;
+    }
+
+    /* Features Section */
+
+    section.features {
+        transform: skewY(7deg) translateY(-8em);
+    }
+    section.features .wrapper {
+        transform: skewY(-7deg);
+    }
+
+    section.features:before {
+        content: '';
+        position: absolute;
+        background: url('Assets/zig.svg') no-repeat;
+        width: 205px;
+        height: 80px;
+        bottom: -30px;
+        left: 10%;
+    }
+
+    section.features .wrapper ul {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 7em 0 12em;
+    }
+
+    section.features .wrapper ul li:last-of-type {
+        grid-column: 1/3;
+    }
+
+    /* Testimonials Section */
+
+    .testimonial-info {
+        display: flex;
+        gap: 2em;
+    }
+
+    .author-pic, .author {
+        /* evens out the picture and right column to 50/50 */
+        flex: 1;
+    }
+    .author-pic {
+        margin: 0;
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
