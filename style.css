@@ -65,6 +65,11 @@ p.subhead {
     margin-top: 3em;
 }
 
+.cta-btns img {
+    height: 40px;
+    width: 135px;
+}
+
 .phone {
     width: 90%;
     margin-top: 5em;
@@ -226,6 +231,11 @@ nav.secondary-nav ul li a {
         justify-content: left;
     }
 
+    .cta-btns img {
+        height: 62px;
+        width: 209px;
+    }
+
     /* Features Section */
 
     section.features {
@@ -276,5 +286,84 @@ nav.secondary-nav ul li a {
         flex-direction: column;
         justify-content: space-between;
     }
+
+}
+
+/* Media Quries -- Desktop */
+
+@media only screen and (min-width: 1100px) {
+    .wrapper {
+        max-width: 1000px;
+        margin: 2em auto;
+    }
+
+    .phone {
+        left: -100px
+    }
+
+    .hero .right-col {
+        width: 500px;
+        height: 600px;
+        overflow: inherit;
+    }
+
+    .cta-btns {
+        margin-top: 8em;
+    }
+
+    .hero .left-col {
+        position: relative;
+    }
+
+    .hero .left-col .appstore:before {
+        content: '';
+        position: absolute;
+        background: url('Assets/arrow.svg') no-repeat;
+        width: 189px; 
+        height: 176px;
+        bottom: 200px;
+        left: 340px;
+    }
+
+    /* Features Section */
+
+    section.features .wrapper ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        height: 300px;
+    }
+
+    section.features .wrapper ul li:last-of-type {
+        grid-column: auto;
+        align-self: end;
+    }
+
+    section.features .wrapper ul li:nth-of-type(2) {
+        align-self: center;
+    }
+
+    section.features:before {
+        left: 20%;
+    }
+
+     /* Testimonials Section */
+
+     .testimonial {
+        display: flex;
+        gap: 4em;
+        margin: 12em 0;
+     }
+
+     .testimonial-quote, .testimonial-info {
+        flex: 1;
+     }
+
+     .testimonial-quote {
+        text-align: right;
+     }
+
+     .testimonial h2 {
+        margin-top: 0;
+     }
 
 }
