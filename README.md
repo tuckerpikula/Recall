@@ -1,3 +1,3 @@
 # Recall
-Fully responsive landing page -- personal project
+Fully responsive landing page using a design from figma -- personal project
 
